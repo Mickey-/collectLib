@@ -19,10 +19,15 @@ gulp.task('default', function() {
             rs = gulp.src(minFileName);
         } else {
             fullFileName = ff.findFile(v + '.js');
-            rs = gulp.src(fullFileName).pipe(uglify()).pipe(rename(v + '.min.js'));
+            if (fullFileName) {
+                rs = gulp.src(fullFileName).pipe(uglify()).pipe(rename(v + '.min.js'));
+            } else {
+                console.log('该文件在包中命名不规则，请手动复制到build/目录中 ------ ' + (v).red);
+                return; 
+            }
         }
         rs.pipe(gulp.dest('./build/'));
-        console.log(' lib file has generated in build/ ======== ' + (v + '.min.js').green);
+        console.log(' lib file has generated in build/ ------ ' + (v + '.min.js').green);
     });
 
 })
