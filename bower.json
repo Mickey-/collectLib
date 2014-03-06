@@ -1,0 +1,13 @@
+{
+  "name": "sj/lib",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "~1.10.2",
+    "underscore": "~1.6.0",
+    "angular": "~1.2.14",
+    "backbone": "~1.1.2",
+    "highcharts": "~3.0"
+  },
+  "devDependencies": {
+  }
+}
