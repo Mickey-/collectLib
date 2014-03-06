@@ -1,0 +1,15 @@
+{
+  "name": "sj-lib",
+  "version": "0.0.1",
+  "repository": "git@gitlab.alibaba-inc.com:sj/lib.git",
+  "description": "目前商家业务产品线非常广，各个项目都会依赖一些非kissy、非dpl的公共库，为统一sj产品对开源库的使用，建立sj/lib。 常用的库级文件都会放在这里，由bower管理版本及依赖，方便大家选用。",
+  "keywords": ["sj", "lib"],
+  "homepage": "http://gitlab.alibaba-inc.com/sj/lib",
+  "dependencies": {
+    "gulp": "~3.5.2",
+    "gulp-uglify": "~0.2.1",
+    "gulp-rename": "~1.0.0",
+    "fs-finder": "~1.8.0",
+    "colors": "~0.6.2"
+  }
+}
