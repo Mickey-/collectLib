@@ -29,5 +29,4 @@ gulp.task('default', function() {
         rs.pipe(gulp.dest('./build/'));
         console.log(' lib file has generated in build/ ------ ' + (v + '.min.js').green);
     });
-
 })
