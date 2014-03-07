@@ -13,8 +13,11 @@ __非kissy、非dpl__,商家前端(sj)应用所依赖的三方库文件cdn存放
 
 ## 这里做了什么
 
-建立lib库的单独仓库，利用__bower__管理lib版本的依赖，利用__gulp__处理bower最终文件并导出到build目录。   
+建立lib库的单独仓库，利用__bower__管理lib版本的依赖，利用__gulp__处理bower最终文件并导出到build目录。     
+线上调试需求可以将bower包的lib源码何map source加入build/。    
+
 下面是目前已加入的lib文件，大家有其他需要可以再加入。
+大家自己添加lib库后请__自行扩充__下面列表，方便其他同学知晓、引用。
 
 1. jquery : http://g.tbcdn.cn/sj/lib/jquery.min.js
 2. angular : http://g.tbcdn.cn/sj/lib/angular.min.js
@@ -43,7 +46,19 @@ __非kissy、非dpl__,商家前端(sj)应用所依赖的三方库文件cdn存放
   }
 ```
 
-然后可以去build目录查看文件是否正确，之后走常规的tag、push发布流程，即可发布线上。
+这里没有grunt，因为仅是简单的包管理需求，没有用任务堆积grunt的必要，权当大家了解gulp: )
+
+看到如下提示后
+
+```
+    lib file has generated in build/ ------ jquery.min.js
+    lib file has generated in build/ ------ backbone.min.js
+    lib file has generated in build/ ------ underscore.min.js
+    lib file has generated in build/ ------ angular.min.js
+    lib file has generated in build/ ------ highcharts.min.js
+```
+
+可以去build目录查看文件是否正确，之后走常规的tag、push发布流程，即可发布线上。
 
 以后需要添加，直接执行3、4步骤即可。
 
@@ -52,7 +67,7 @@ __非kissy、非dpl__,商家前端(sj)应用所依赖的三方库文件cdn存放
 
 ## 注：
 
-* 不要修改bower.json的键名,即__不要带.js后缀名__
-* 没有grunt，因为仅是简单的包管理需求，没有用任务堆积式的grunt，可以权当大家了解gulp
-* 线上调试需求可以将bower包的lib源码何map source加入build/。
+* 如果是更新文件，一定要注意检查库文件更新后是否正确！以免意外造成多个应用js报错！
+* bower.json的键名__不要带.js后缀名__
+* 
 * 对于lib文件版本升级，一定要注意新版本__不向下兼容__的部分对已有应用会不会有影响
