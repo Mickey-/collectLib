@@ -16,11 +16,11 @@ __非kissy、非dpl__,商家前端(sj)应用所依赖的三方库文件cdn存放
 建立lib库的单独仓库，利用__bower__管理lib版本的依赖，利用__gulp__处理bower最终文件并导出到build目录。   
 下面是目前已加入的lib文件，大家有其他需要可以再加入。
 
-1. [jquery](http://g.tbcdn.cn/sj/lib/jquery.min.js) :http://g.tbcdn.cn/sj/lib/jquery.min.js
-2. [angular](http://g.tbcdn.cn/sj/lib/angular.min.js) :http://g.tbcdn.cn/sj/lib/angular.min.js
-3. [backbone](http://g.tbcdn.cn/sj/lib/backbone.min.js) :http://g.tbcdn.cn/sj/lib/backbone.min.js
-4. [underscore](http://g.tbcdn.cn/sj/lib/underscore.min.js) :http://g.tbcdn.cn/sj/lib/underscore.min.js
-5. [highcharts](http://g.tbcdn.cn/sj/lib/highcharts.min.js) :http://g.tbcdn.cn/sj/lib/highcharts.min.js
+1. jquery : http://g.tbcdn.cn/sj/lib/jquery.min.js
+2. angular : http://g.tbcdn.cn/sj/lib/angular.min.js
+3. backbone : http://g.tbcdn.cn/sj/lib/backbone.min.js
+4. underscore : http://g.tbcdn.cn/sj/lib/underscore.min.js
+5. highcharts : http://g.tbcdn.cn/sj/lib/highcharts.min.js
 
 
 ## 如何维护更新lib
@@ -50,7 +50,7 @@ __非kissy、非dpl__,商家前端(sj)应用所依赖的三方库文件cdn存放
 
 
 
-##注：
+## 注：
 
 * 不要修改bower.json的键名,即__不要带.js后缀名__
 * 没有grunt，因为仅是简单的包管理需求，没有用任务堆积式的grunt，可以权当大家了解gulp
