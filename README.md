@@ -42,15 +42,15 @@ __非kissy、非dpl__,商家前端(sj)应用所依赖的三方库文件cdn存放
 3. 在bower.json的dependencies字段添加lib库
 4. 直接执行 `gulp`
 
- ```
-  "dependencies": {
-    "jquery": "~1.11.0"
-    ,"backbone": "~1.1.2"
-    ,"underscore": "~1.6.0"
-    ,"angular": "~1.2.14"
-    ,"highcharts": "~3.0"
-    //,add new lib
-  }
+```
+    "dependencies": {
+        "jquery": "~1.11.0"
+        ,"backbone": "~1.1.2"
+        ,"underscore": "~1.6.0"
+        ,"angular": "~1.2.14"
+        ,"highcharts": "~3.0"
+        //,add new lib
+    }
 ```
 
 这里没有grunt，因为仅是简单的包管理需求，没有用任务堆积grunt的必要，权当大家了解gulp: )
@@ -69,7 +69,7 @@ __非kissy、非dpl__,商家前端(sj)应用所依赖的三方库文件cdn存放
 
 以后需要添加，直接执行3、4步骤即可。
 
-### 一些例外
+## 一些例外
 
 如果希望引入一些lib派生文件，且文件体积太大不愿合并进lib文件,
 因为lib文件较少，且多是一次性操作，以后便不用关心，故不使用自动化脚本，手工拷贝进build/即可。
