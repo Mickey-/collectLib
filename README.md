@@ -14,18 +14,19 @@
 ## 这里做了什么
 
 建立lib库的单独仓库，利用 __bower__ 管理lib的版本和依赖，利用 __gulp__ 处理bower最终文件并导出到build目录。     
-关于线上调试需求，已将bower包生成目录指定为build，lib源码和map source都会发布到cdn。。    
+关于线上调试需求，已将bower包生成目录指定为build，lib源码和map source(如果有)都会发布到cdn。。    
 
 
-__**结合@惟明的建议，改造了各脚本和目录结构，以适应多版本lib需求**__
+__**结合@惟明的建议，改造了各脚本和目录结构，以适应多版本lib需求**__小版本差异建议统一，统一的版本不会在路径中显示版本号，可在bower.json中查看。
 
 大家自己添加lib库后请 __自行扩充__ 下面列表，方便其他同学知晓、引用。
 
-1. jquery : http://g.tbcdn.cn/sj/lib/jquery.min.js
-2. angular : http://g.tbcdn.cn/sj/lib/angular.min.js
-3. backbone : http://g.tbcdn.cn/sj/lib/backbone.min.js
-4. underscore : http://g.tbcdn.cn/sj/lib/underscore.min.js
-5. highcharts : http://g.tbcdn.cn/sj/lib/highcharts.min.js
+1. jquery : http://g.tbcdn.cn/sj/lib/jquery/dist/jquery.min.js
+2. jquery-2.1.0: http://g.tbcdn.cn/sj/lib/jquery-2.1.0/dist/jquery.min.js
+2. angular : http://g.tbcdn.cn/sj/lib/angular/angular.min.js
+3. backbone : http://g.tbcdn.cn/sj/lib/backbone/backbone.min.js
+4. underscore : http://g.tbcdn.cn/sj/lib/underscore/underscore.min.js
+5. highcharts : http://g.tbcdn.cn/sj/lib/highcharts/highcharts.min.js
 
 
 应该说，大部分时候大家是不需要关心这个仓库的细节的，只需要在项目初始化时引用这里的lib文件，不过对于
