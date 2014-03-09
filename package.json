@@ -9,6 +9,7 @@
     "gulp": "~3.5.2",
     "gulp-uglify": "~0.2.1",
     "gulp-rename": "~1.0.0",
+    "execSync": "~1.0.1",
     "fs-finder": "~1.8.0",
     "colors": "~0.6.2"
   }
