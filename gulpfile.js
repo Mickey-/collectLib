@@ -5,16 +5,17 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     colors = require('colors'),
-    exec = require('child_process').exec,
+    //exec = require('child_process').exec,
+    execSync = require('execSync'),
     sys = require('sys'),
     finder = require('fs-finder');
 
 gulp.task('default', function() {
-    //TODO 同步exec
-    exec("bower install", extract);
-    //循环体v为各个库文件名，如“jquery”，“underscore”
-    function extract (error, stdout, stderr){
-        sys.puts(stdout);
+    console.log('\nchecking and downloading...'.grey);
+    var ret = execSync.exec('bower install');
+    console.log(ret.stdout);
+    disposeEachLib();
+    function disposeEachLib (){
         LIBS.forEach(function(v, k){
             var ff = finder.from('./build/' + v),
                 minFilePath = ff.findFile(v + '.min.js'),
@@ -27,12 +28,11 @@ gulp.task('default', function() {
                 fileName = v.replace(/-\d\.\d\.\d$/, '') + '.js';
                 fullFilePath = ff.findFile(fileName + '<$>');
                 if (fullFilePath) {
-                    rs = gulp.src(fullFilePath).pipe(uglify({preserveComments: 'some'})).pipe(rename(v + '.min.js'));
+                    rs = gulp.src(fullFilePath).pipe(uglify()).pipe(rename(v + '.min.js'));
                 } else {
-                    console.log('该文件在包中命名不规则，请手动复制到build/目录中 ------ ' + (v).red);
+                    console.log('该文件在包中命名不规则，请检查bower.json或手动复制到build/目录中 ------ ' + (v).red);
                     return;
                 }
-                //rs.pipe(gulp.dest('./build/'));
                 rs.pipe(gulp.dest(fullFilePath.replace(new RegExp(fileName + '$'), '')));
             }
             console.log(' lib file has generated in build/ ------ ' + (v + '.min.js').green);
