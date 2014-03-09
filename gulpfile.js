@@ -27,7 +27,7 @@ gulp.task('default', function() {
                 fileName = v.replace(/-\d\.\d\.\d$/, '') + '.js';
                 fullFilePath = ff.findFile(fileName + '<$>');
                 if (fullFilePath) {
-                    rs = gulp.src(fullFilePath).pipe(uglify()).pipe(rename(v + '.min.js'));
+                    rs = gulp.src(fullFilePath).pipe(uglify({preserveComments: 'some'})).pipe(rename(v + '.min.js'));
                 } else {
                     console.log('该文件在包中命名不规则，请手动复制到build/目录中 ------ ' + (v).red);
                     return;
