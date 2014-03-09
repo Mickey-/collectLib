@@ -10,6 +10,5 @@
     ,"underscore": "~1.6.0"
     ,"angular": "~1.2.14"
     ,"highcharts": "~3.0"
-  },
-  "homepage": "http://gitlab.alibaba-inc.com/sj/lib"
+  }
 }
