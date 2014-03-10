@@ -22,11 +22,12 @@ __**结合@惟明的建议，改造了各脚本和目录结构，以适应多版
 大家自己添加lib库后请 __自行扩充__ 下面列表，方便其他同学知晓、引用。
 
 1. jquery : http://g.tbcdn.cn/sj/lib/jquery/dist/jquery.min.js
-2. jquery-2.1.0: http://g.tbcdn.cn/sj/lib/jquery-2.1.0/dist/jquery.min.js
-2. angular : http://g.tbcdn.cn/sj/lib/angular/angular.min.js
-3. backbone : http://g.tbcdn.cn/sj/lib/backbone/backbone.min.js
-4. underscore : http://g.tbcdn.cn/sj/lib/underscore/underscore.min.js
-5. highcharts : http://g.tbcdn.cn/sj/lib/highcharts/highcharts.min.js
+1. jquery-2.1.0: http://g.tbcdn.cn/sj/lib/jquery-2.1.0/dist/jquery.min.js
+1. angular : http://g.tbcdn.cn/sj/lib/angular/angular.min.js
+1. backbone : http://g.tbcdn.cn/sj/lib/backbone/backbone.min.js
+1. underscore : http://g.tbcdn.cn/sj/lib/underscore/underscore.min.js
+1. highcharts : http://g.tbcdn.cn/sj/lib/highcharts/highcharts.min.js
+1. requirejs : http://g.tbcdn.cn/sj/lib/requirejs/require.min.js
 
 
 应该说，大部分时候大家是不需要关心这个仓库的细节的，只需要在项目初始化时引用这里的lib文件，不过对于
@@ -62,12 +63,12 @@ __**结合@惟明的建议，改造了各脚本和目录结构，以适应多版
 看到如下提示后
 
 ```
-    lib files have generated in build/ ------ jquery
-    lib files have generated in build/ ------ jquery-2.1.0
-    lib files have generated in build/ ------ backbone
-    lib files have generated in build/ ------ underscore
-    lib files have generated in build/ ------ angular
-    lib files have generated in build/ ------ highcharts
+    lib files have generated in build/ ------ jquery/
+    lib files have generated in build/ ------ jquery-2.1.0/
+    lib files have generated in build/ ------ backbone/
+    lib files have generated in build/ ------ underscore/
+    lib files have generated in build/ ------ angular/
+    lib files have generated in build/ ------ highcharts/
 ```
 
 之后走常规的tag、push发布流程，即可发布线上。
