@@ -35,7 +35,7 @@ gulp.task('default', function() {
                 }
                 rs.pipe(gulp.dest(fullFilePath.replace(new RegExp(fileName + '$'), '')));
             }
-            console.log(' lib file has generated in build/ ------ ' + (v + '.min.js').green);
+            console.log(' lib files have generated in build/ ------ ' + v.green);
         });
     }
 })
