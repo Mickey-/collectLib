@@ -1,7 +1,9 @@
 {
   "name": "highcharts",
-  "version": "3.0.7",
-  "main": "./highcharts.js",
-  "dependencies": {
-  }
+  "version": "v3.0.10",
+  "main": [
+    "highcharts.js",
+    "highcharts-more.js",
+    "modules/exporting.src.js"
+  ]
 }
