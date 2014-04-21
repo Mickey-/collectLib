@@ -8,6 +8,8 @@ var gulp = require('gulp'),
     //exec = require('child_process').exec,
     execSync = require('execSync'),
     sys = require('sys'),
+    fs = require("fs"),
+    path = require("path"),
     finder = require('fs-finder');
 
 gulp.task('default', function() {
@@ -18,7 +20,8 @@ gulp.task('default', function() {
     disposeEachLib();
     function disposeEachLib (){
         LIBS.forEach(function(v, k){
-            var ff = finder.from('./build/' + v),
+            var libroot = './build/' + v
+                ff = finder.from(libroot),
                 //replace1:将xxx-2.1.0替换为xxx
                 //replace2:将名叫xxxjs的组件替换为xxx.js而不是xxxjs.js(如requirejs)
                 fileName = v.replace(/-\d\.\d\.\d$/, '').replace(/js$/, '') + '.js',
@@ -40,6 +43,8 @@ gulp.task('default', function() {
                 }
             }
             console.log(' lib files have generated in build/ ------ ' + (v + '/').green);
+            rmdir(libroot + '/src/');
+            rmdir(libroot + '/docs/');
         });
     }
     //获得str不区分大小写的正则
@@ -50,4 +55,23 @@ gulp.task('default', function() {
             }
         ).join('');
     }
+
+    //清理一些不要的、可能造成发布失败的目录
+    function rmdir(dir) {
+        try {
+            var files = fs.readdirSync(dir);
+        } catch(err) {
+            return false;
+        }
+        for(var i = 0; i < files.length; i++) {
+            var filename = path.join(dir, files[i]);
+            var stat = fs.statSync(filename);
+            if (stat.isDirectory()) {
+                rmdir(filename);
+            } else {
+                fs.unlinkSync(filename);
+            }
+        }
+        fs.rmdirSync(dir);
+    };
 })
