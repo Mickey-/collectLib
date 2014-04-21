@@ -27,6 +27,7 @@ __**结合@惟明的建议，改造了各脚本和目录结构，以适应多版
 1. backbone : http://g.tbcdn.cn/sj/lib/backbone/backbone.min.js
 1. underscore : http://g.tbcdn.cn/sj/lib/underscore/underscore.min.js
 1. highcharts : http://g.tbcdn.cn/sj/lib/highcharts/highcharts.min.js
+1. highcharts(需要使用地图图表) : http://g.tbcdn.cn/sj/lib/highcharts/??highcharts.min.js,map-module.js,chnmap.js
 1. requirejs : http://g.tbcdn.cn/sj/lib/requirejs/require.min.js
 
 
@@ -79,6 +80,8 @@ __**结合@惟明的建议，改造了各脚本和目录结构，以适应多版
 
 如果希望引入一些lib派生文件，且文件体积太大不愿合并进lib文件,
 因为lib文件较少，且多是一次性操作，以后便不用关心，故不使用自动化脚本，手工拷贝进build/即可。
+
+angular1.3不再支持IE8，所以要支持IE8的话只能用1.2+的，千牛使用可以单独开一条规则
 
 
 # 注：

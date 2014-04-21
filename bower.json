@@ -8,7 +8,7 @@
     ,"jquery-2.1.0": "git://github.com/jquery/jquery.git#2.1.0"
     ,"backbone": "~1.1.2"
     ,"underscore": "~1.6.0"
-    ,"angular": "~1.2.14"
+    ,"angular": "~1.2.17"
     ,"highcharts": "git://github.com/highslide-software/highcharts-release.git#3.0.10"
     ,"requirejs":"~2.1.11"
   },
