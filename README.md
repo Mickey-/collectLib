@@ -29,6 +29,7 @@ __**结合@惟明的建议，改造了各脚本和目录结构，以适应多版
 1. highcharts : http://g.tbcdn.cn/sj/lib/highcharts/highcharts.min.js
 1. highcharts(需要使用地图图表) : http://g.tbcdn.cn/sj/lib/highcharts/??highcharts.min.js,map-module.js,chnmap.js
 1. requirejs : http://g.tbcdn.cn/sj/lib/requirejs/require.min.js
+1. ZeroClipboard : http://g.tbcdn.cn/sj/lib/zeroclipboard/ZeroClipboard.min.js
 
 
 应该说，大部分时候大家是不需要关心这个仓库的细节的，只需要在项目初始化时引用这里的lib文件，不过对于
